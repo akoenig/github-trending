@@ -1,0 +1,7 @@
+specs
+gulpfile.js
+.editorconfig
+.jshintrc
+.npmrc
+.zedstate
+.travis.yml

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+#
+# npm postinstall script
+#
+# Author: André König <koenig@priorist.com> 
+#
+
+case $1 in
+    install-pre-commit)
+        if [ -d ".git" ]; then
+            cp ./.scripts/pre-commit .git/hooks/pre-commit
+        fi
+    ;;
+esac
+
+exit $?
