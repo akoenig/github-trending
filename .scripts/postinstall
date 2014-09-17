@@ -3,7 +3,7 @@
 #
 # npm postinstall script
 #
-# Author: André König <koenig@priorist.com> 
+# Author: André König <andre.koenig@posteo.de> 
 #
 
 case $1 in
