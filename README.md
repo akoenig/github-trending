@@ -1,4 +1,4 @@
-# github-trending
+# github-trending [![Build Status](https://travis-ci.org/akoenig/github-trending.svg?branch=master)](https://travis-ci.org/akoenig/github-trending)
 
 A library for fetching the current trending repositories on GitHub.
 
