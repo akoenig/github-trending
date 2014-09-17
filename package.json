@@ -1,7 +1,7 @@
 {
   "name": "github-trending",
   "version": "1.0.0",
-  "description": "A library for fetching the current trending repositories from GitHub.",
+  "description": "A library for fetching the current trending repositories on GitHub.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
