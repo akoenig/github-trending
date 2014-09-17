@@ -4,8 +4,7 @@
   "description": "A library for fetching the current trending repositories on GitHub.",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test",
-    "postinstall": "./.scripts/postinstall install-pre-commit"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
