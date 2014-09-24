@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.17.0",
+    "mandatory": "^1.0.0",
     "superagent": "^0.18.2",
     "verror": "^1.4.0"
   },
