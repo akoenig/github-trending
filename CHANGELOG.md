@@ -1,6 +1,6 @@
 # UNRELEASED
 
-  * Functionality for fetching all available languages.
+  * Functionality for fetching the available languages for which trending repository data is available.
 
 # 1.0.1 (2014-09-17)
 

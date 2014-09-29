@@ -29,6 +29,19 @@ trending('rust', function (err, repositories) {
 });
 ```
 
+### Available languages
+
+There is also a function which provides an array with all languages for which
+trending repository data is available:
+
+```js
+var trending = require('github-trending');
+
+trending.languages(function (err, languages) {
+    console.log(languages); // => ['ABAP', 'ActionScript', 'Ada', ...]
+});
+```
+
 ## License
 
 The MIT License (MIT)
