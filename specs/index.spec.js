@@ -36,7 +36,18 @@ describe('The "github-trending" library', function () {
 
             expect(util.isArray(repos)).toBe(true);
             expect(repos.length).not.toBe(0);
-console.log(repos);
+
+            done();
+        });
+    });
+
+    it('should be able to fetch the languages for which trending repo data is available', function (done) {
+        trending.languages(function (err, languages) {
+            expect(err).toBeNull();
+
+            expect(util.isArray(languages)).toBe(true);
+            expect(languages.length).not.toBe(0);
+
             done();
         });
     });
