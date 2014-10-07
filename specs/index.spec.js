@@ -30,6 +30,20 @@ describe('The "github-trending" library', function () {
         });
     });
     
+    it('one repository object should provide specific information', function (done) {
+        trending(function (err, repos) {
+            var repository = repos[0];
+
+            expect(repository.title).toBeDefined();
+            expect(repository.owner).toBeDefined();
+            expect(repository.description).toBeDefined();
+            expect(repository.url).toBeDefined();
+            expect(repository.language).toBeDefined();
+
+            done();
+        });
+    });
+
     it('should be able to fetch the trending repos of a particular language', function (done) {
         trending('rust', function (err, repos) {
             expect(err).toBeNull();
