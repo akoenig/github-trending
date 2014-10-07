@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.2.0 (2014-10-07)
 
   * Feature: Scraping repository language.
 
