@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.3.1 (2015-03-09)
 
   * Merged [#3](https://github.com/akoenig/github-trending/pull/3).
 
