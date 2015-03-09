@@ -29,7 +29,7 @@ describe('The "github-trending" library', function () {
             done();
         });
     });
-    
+
     it('one repository object should provide specific information', function (done) {
         trending(function (err, repos) {
             var repository = repos[0];
@@ -39,6 +39,7 @@ describe('The "github-trending" library', function () {
             expect(repository.description).toBeDefined();
             expect(repository.url).toBeDefined();
             expect(repository.language).toBeDefined();
+            expect(repository.star).toBeDefined();
 
             done();
         });
