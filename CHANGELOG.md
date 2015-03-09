@@ -1,4 +1,4 @@
-# UNRELEASED
+# 1.3.0 (2015-03-09)
 
   * Feature: Additional information about repository stars.
 
