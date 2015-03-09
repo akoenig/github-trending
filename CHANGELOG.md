@@ -1,3 +1,7 @@
+# UNRELEASED
+
+  * Merged [#3](https://github.com/akoenig/github-trending/pull/3).
+
 # 1.3.0 (2015-03-09)
 
   * Feature: Additional information about repository stars.
