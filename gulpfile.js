@@ -15,25 +15,31 @@
 
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
-var jasmine = require('gulp-jasmine');
+var jscs = require('gulp-jscs');
+var mocha = require('gulp-mocha');
 var sequence = require('run-sequence');
 var paths = {};
 
 paths.sources = ['./*.js', './lib/**/*.js'];
 paths.specs = ['./specs/*.spec.js'];
 
-gulp.task('lint', function () {
+gulp.task('lint', function lint () {
     return gulp.src(paths.sources)
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('test', function () {
-    return gulp.src(paths.specs)
-        .pipe(jasmine());
+gulp.task('specs', function specs () {
+    return gulp.src(paths.specs, {read: false})
+        .pipe(mocha({reporter: 'nyan'}));
 });
 
-gulp.task('default', function (callback) {
-    return sequence('lint', 'test', callback);
+gulp.task('checkstyle', function checkstyle () {
+    return gulp.src(paths.sources)
+        .pipe(jscs());
+});
+
+gulp.task('default', function def (callback) {
+    return sequence('lint', 'checkstyle', 'specs', callback);
 });

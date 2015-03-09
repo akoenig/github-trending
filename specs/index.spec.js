@@ -15,53 +15,55 @@
 
 var util = require('util');
 
+var expect = require('expect.js');
+
 var trending = require('../');
 
-describe('The "github-trending" library', function () {
+describe('The "github-trending" library', function suite () {
 
-    it('should be able to fetch the trending repos of all languages', function (done) {
+    it('should be able to fetch the trending repos of all languages', function test (done) {
         trending(function (err, repos) {
-            expect(err).toBeNull();
+            expect(err).to.be(null);
 
-            expect(util.isArray(repos)).toBe(true);
-            expect(repos.length).not.toBe(0);
+            expect(util.isArray(repos)).to.be(true);
+            expect(repos.length).not.to.be(0);
 
             done();
         });
     });
 
-    it('one repository object should provide specific information', function (done) {
+    it('one repository object should provide specific information', function test (done) {
         trending(function (err, repos) {
             var repository = repos[0];
 
-            expect(repository.title).toBeDefined();
-            expect(repository.owner).toBeDefined();
-            expect(repository.description).toBeDefined();
-            expect(repository.url).toBeDefined();
-            expect(repository.language).toBeDefined();
-            expect(repository.star).toBeDefined();
+            expect(repository.title).not.to.be(undefined);
+            expect(repository.owner).not.to.be(undefined);
+            expect(repository.description).not.to.be(undefined);
+            expect(repository.url).not.to.be(undefined);
+            expect(repository.language).not.to.be(undefined);
+            expect(repository.star).not.to.be(undefined)
 
             done();
         });
     });
 
-    it('should be able to fetch the trending repos of a particular language', function (done) {
+    it('should be able to fetch the trending repos of a particular language', function test (done) {
         trending('rust', function (err, repos) {
-            expect(err).toBeNull();
+            expect(err).to.be(null);
 
-            expect(util.isArray(repos)).toBe(true);
-            expect(repos.length).not.toBe(0);
+            expect(util.isArray(repos)).to.be(true);
+            expect(repos.length).not.to.be(0);
 
             done();
         });
     });
 
-    it('should be able to fetch the languages for which trending repo data is available', function (done) {
+    it('should be able to fetch the languages for which trending repo data is available', function test (done) {
         trending.languages(function (err, languages) {
-            expect(err).toBeNull();
+            expect(err).to.be(null);
 
-            expect(util.isArray(languages)).toBe(true);
-            expect(languages.length).not.toBe(0);
+            expect(util.isArray(languages)).to.be(true);
+            expect(languages.length).not.to.be(0);
 
             done();
         });
