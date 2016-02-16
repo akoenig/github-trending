@@ -63,6 +63,7 @@ describe('The "github-trending" library', function suite () {
             expect(err).to.be(null);
 
             expect(util.isArray(languages)).to.be(true);
+            expect(languages).to.not.contain('trending?since=monthly');
             expect(languages.length).not.to.be(0);
 
             done();
