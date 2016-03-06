@@ -41,7 +41,7 @@ describe('The "github-trending" library', function suite () {
             expect(repository.description).not.to.be(undefined);
             expect(repository.url).not.to.be(undefined);
             expect(repository.language).not.to.be(undefined);
-            expect(repository.star).not.to.be(undefined)
+            expect(repository.stars).not.to.be(undefined)
 
             done();
         });
