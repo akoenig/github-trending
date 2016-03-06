@@ -58,6 +58,17 @@ describe('The "github-trending" library', function suite () {
         });
     });
 
+    it('should be able to fetch the trending repos of a particular language with a timespan', function test (done) {
+        trending('rust', 'weekly', function (err, repos) {
+            expect(err).to.be(null);
+
+            expect(util.isArray(repos)).to.be(true);
+            expect(repos.length).not.to.be(0);
+
+            done();
+        });
+    });
+
     it('should be able to fetch the languages for which trending repo data is available', function test (done) {
         trending.languages(function (err, languages) {
             expect(err).to.be(null);
