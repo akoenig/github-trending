@@ -13,15 +13,15 @@
 
 'use strict';
 
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
-var mocha = require('gulp-mocha');
-var sequence = require('run-sequence');
-var paths = {};
+const gulp = require('gulp');
+const jshint = require('gulp-jshint');
+const jscs = require('gulp-jscs');
+const mocha = require('gulp-mocha');
+const sequence = require('run-sequence');
+const paths = {};
 
 paths.sources = ['./*.js', './lib/**/*.js'];
-paths.specs = ['./specs/*.spec.js'];
+paths.specs = ['./lib/**/*.spec.js'];
 
 gulp.task('lint', function lint () {
     return gulp.src(paths.sources)
@@ -41,5 +41,5 @@ gulp.task('checkstyle', function checkstyle () {
 });
 
 gulp.task('default', function def (callback) {
-    return sequence('lint', 'checkstyle', 'specs', callback);
+    return sequence('specs', callback);
 });

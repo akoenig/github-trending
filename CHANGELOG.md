@@ -1,3 +1,8 @@
+# 1.3.2 (2016-08-20)
+
+  * Merged [#9](https://github.com/akoenig/github-trending/pull/9).
+  * Integrate `greenkeeper.io`
+
 # 1.3.1 (2015-03-09)
 
   * Merged [#3](https://github.com/akoenig/github-trending/pull/3).
