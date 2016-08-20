@@ -28,6 +28,16 @@ trending('rust', function (err, repositories) {
     console.log(repositories);
 });
 ```
+### Trending repositories (particular language and timespan)
+
+```js
+var trending = require('github-trending');
+
+// Available timespans - daily, weekly, monthly
+trending('rust', 'weekly', function (err, repositories) {
+    console.log(repositories);
+});
+```
 
 ### Available languages
 

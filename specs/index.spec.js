@@ -41,7 +41,7 @@ describe('The "github-trending" library', function suite () {
             expect(repository.description).not.to.be(undefined);
             expect(repository.url).not.to.be(undefined);
             expect(repository.language).not.to.be(undefined);
-            expect(repository.star).not.to.be(undefined)
+            expect(repository.stars).not.to.be(undefined)
 
             done();
         });
@@ -49,6 +49,17 @@ describe('The "github-trending" library', function suite () {
 
     it('should be able to fetch the trending repos of a particular language', function test (done) {
         trending('rust', function (err, repos) {
+            expect(err).to.be(null);
+
+            expect(util.isArray(repos)).to.be(true);
+            expect(repos.length).not.to.be(0);
+
+            done();
+        });
+    });
+
+    it('should be able to fetch the trending repos of a particular language with a timespan', function test (done) {
+        trending('rust', 'weekly', function (err, repos) {
             expect(err).to.be(null);
 
             expect(util.isArray(repos)).to.be(true);
