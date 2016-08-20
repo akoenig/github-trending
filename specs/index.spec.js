@@ -21,6 +21,8 @@ var trending = require('../');
 
 describe('The "github-trending" library', function suite () {
 
+    this.timeout(10000);
+
     it('should be able to fetch the trending repos of all languages', function test (done) {
         trending(function (err, repos) {
             expect(err).to.be(null);
