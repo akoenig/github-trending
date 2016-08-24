@@ -23,7 +23,7 @@
   "author": "André König <andre.koenig@posteo.de>",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.22.0",
     "mandatory": "^1.0.0",
     "verror": "^1.4.0"
   },
