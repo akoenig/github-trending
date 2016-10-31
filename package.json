@@ -14,7 +14,7 @@
     "url": "git@github.com:akoenig/github-trending.git"
   },
   "engines": {
-    "node": "~0.10.31"
+    "node": ">= 4"
   },
   "keywords": [
     "github",
