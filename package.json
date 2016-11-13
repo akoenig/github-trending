@@ -31,7 +31,7 @@
     "expect.js": "^0.3.1",
     "gulp": "^3.8.11",
     "gulp-jscs": "^4.0.0",
-    "gulp-jshint": "^2.0.1",
+    "gulp-jshint": "^2.0.3",
     "gulp-mocha": "^3.0.1",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
