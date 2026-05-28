@@ -1,3 +1,8 @@
+> [!NOTE]
+> This project is preserved as a historical open-source project. It is not actively maintained, and its dependencies or recommended practices may be outdated.
+>
+> I’m keeping it public because it may still be useful as reference material. If you rely on it in production, please review the code carefully and consider maintaining your own fork.
+
 # github-trending [![Build Status](https://travis-ci.org/akoenig/github-trending.svg?branch=master)](https://travis-ci.org/akoenig/github-trending)
 
 A library for fetching the current trending repositories on GitHub.
